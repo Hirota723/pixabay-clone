@@ -17,7 +17,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ fetchData }) => {
             <img
               className="w-full h-full object-cover rounded shadow-md bg-center cursor-pointer hover:shadow-none"
               src={data.largeImageURL}
-              alt=""
+              alt={data.pageURL}
             />
           </a>
         </div>

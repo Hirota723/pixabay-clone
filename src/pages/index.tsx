@@ -16,9 +16,7 @@ const Home = () => {
     const endpointURL = `https://pixabay.com/api/?key=44252574-0f66666e1bb0e41e2fc432aa5&q=${ref.current?.value}&image_type=photo`;
 
     fetch(endpointURL)
-      .then((res) => {
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         console.log(data.hits);
         setFetchData(data.hits);
@@ -28,7 +26,7 @@ const Home = () => {
   return (
     <main className="flex flex-col items-center w-full min-h-screen bg-gray-200">
       <h2 className="text-4xl font-bold text-gray-700 pt-10">My Pixabay</h2>
-      <form onSubmit={(e) => handleSubmit(e)} className="w-full max-w-xl m-5">
+      <form onSubmit={handleSubmit} className="w-full max-w-xl m-5">
         <input
           type="text"
           placeholder="画像を探す"
