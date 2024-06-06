@@ -13,11 +13,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ fetchData }) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
       {fetchData.map((data) => (
         <div key={data.id} className="w-64 h-64">
-          <a href={data.pageURL} target="_blank">
+          <a href={data.pageURL} target="_blank" rel="noopener noreferrer">
             <img
               className="w-full h-full object-cover rounded shadow-md bg-center cursor-pointer hover:shadow-none"
               src={data.largeImageURL}
-              alt={data.pageURL}
+              alt={`Image from ${data.pageURL}`}
             />
           </a>
         </div>
