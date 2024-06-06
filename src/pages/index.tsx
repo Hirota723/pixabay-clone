@@ -10,17 +10,15 @@ const Home = () => {
   const ref = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(ref.current?.value);
-
-    const endpointURL = `https://pixabay.com/api/?key=44252574-0f66666e1bb0e41e2fc432aa5&q=${ref.current?.value}&image_type=photo`;
-
-    fetch(endpointURL)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data.hits);
-        setFetchData(data.hits);
-      });
+    // e.preventDefault();
+    // console.log(ref.current?.value);
+    // const endpointURL = `https://pixabay.com/api/?key=44252574-0f66666e1bb0e41e2fc432aa5&q=${ref.current?.value}&image_type=photo`;
+    // fetch(endpointURL)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data.hits);
+    //     setFetchData(data.hits);
+    //   });
   };
 
   return (

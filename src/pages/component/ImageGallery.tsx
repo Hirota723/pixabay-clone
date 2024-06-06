@@ -11,7 +11,7 @@ interface ImageGalleryProps {
 const ImageGallery: React.FC<ImageGalleryProps> = ({ fetchData }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      {fetchData.map((data) => (
+      {/* {fetchData.map((data) => (
         <div key={data.id} className="w-64 h-64">
           <a href={data.pageURL} target="_blank">
             <img
@@ -21,7 +21,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ fetchData }) => {
             />
           </a>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
